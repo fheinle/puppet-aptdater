@@ -1,0 +1,4 @@
+.dependencies
+.idea
+.librarian
+Puppetfile.lock
