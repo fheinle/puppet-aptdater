@@ -31,7 +31,7 @@ Additional requirements:
 ```puppet
 node central.example.com {
 
-  class { 'apt-dater':
+  class { 'aptdater':
     ishost => true,
   }
 
@@ -47,7 +47,7 @@ node central.example.com {
 
 node client1.example.com {
 
-  include ::apt-dater
+  include ::aptdater
 
   ssh_authorized_key { "apt-dater-${::facts['fqdn']}":
     ensure => 'present',
