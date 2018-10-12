@@ -6,6 +6,8 @@ class aptdater (
   String  $homedir     = "/home/${username}",
 ) {
 
+  include aptdater::client
+
   if !$isclient and !$ishost {
     fail("Node ${::facts['fqdn']} needs to be either host or client")
   }
@@ -14,8 +16,7 @@ class aptdater (
 
   if $ishost {
     include aptdater::host
-  } else {
-    include aptdater::client
   }
+
 }
 
